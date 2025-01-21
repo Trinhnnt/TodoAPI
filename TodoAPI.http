@@ -1,0 +1,49 @@
+﻿//creates a variable that is used for all of the endpoints.
+@TodoAPI_HostAddress = https://localhost:7093
+
+
+POST {{TodoAPI_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "isComplete":true
+}
+
+###
+
+POST {{TodoAPI_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"walk cat",
+  "isComplete":true
+}
+
+###
+
+GET {{TodoAPI_HostAddress}}/todoitems
+
+###
+
+GET {{TodoAPI_HostAddress}}/todoitems/complete
+
+###
+
+@id=0
+DELETE {{TodoAPI_HostAddress}}/todoitems/1
+###
+
+GET {{TodoAPI_HostAddress}}/todoitems/1
+
+###
+
+PUT {{TodoAPI_HostAddress}}/todoitems/2
+Content-Type: application/json
+
+{
+   "name":"walk pig",
+  "isComplete":true
+}
+
+###
